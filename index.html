@@ -320,17 +320,15 @@ $(document).ready(function(){
             </div>
             <div class="col-md-8">
                 <form id="contact-form">
-                    <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
-                    <input id="form-subject" class="form-control" type="text" name="subject" placeholder="Subject">
-                    <textarea id="form-message" name="message" placeholder="Message"></textarea>
+                    <input id="form-email" class="form-control" type="email" name="email" placeholder="Email" required>
+                    <input id="form-subject" class="form-control" type="text" name="subject" placeholder="Subject" required>
+                    <textarea id="form-message" name="message" placeholder="Message" required></textarea>
                     <input id="form-submit" class="submit" type="submit" name="submit" value="Submit">
                 </form>
             </div>
         </div>
     </div>
 </section>
-
-<p id="confirmation"></p>
 
 <script>
 $('#contact-form').submit(function(e){
