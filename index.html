@@ -1,0 +1,376 @@
+<head>
+
+<title>Kevin Huynh</title>
+
+<link rel="shortcut icon" href="https://static.tumblr.com/2e9nahe/pJpp597mi/android-chrome-512x512.png" type="image/png"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:700|Yantramanav:400,700" rel="stylesheet">
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+
+<script>
+function openNav() {
+    document.getElementById("nav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("nav").style.width = "0";
+}
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+
+<script>
+$(function() {
+    var $el = $('#home');
+    if ($(window).width() > 800){
+        $(window).on('scroll', function () {
+            var scroll = $(document).scrollTop();
+            $el.css({
+                'background-position':'50% '+(-.2*scroll)+'px'
+            });
+        });
+    } else{
+        $el.css('background-attachment', 'scroll');
+    }
+});
+</script>
+    
+<script>
+$(document).ready(function(){
+   $('body').localScroll(); 
+});
+</script>
+    
+<script>
+$(document).ready(function(){
+   var targetOffset = $('#codes').offset().top;
+   var targetOffset2 = $('#design').offset().top;
+   $(window).scroll(function(){
+      if ($(window).scrollTop() + 50 > targetOffset){
+          $(".openbtn").css("fill", "#fff")
+      } else{
+          $(".openbtn").css("fill", "#000")
+      }
+      if ($(window).scrollTop() + 50 > targetOffset2){
+          $(".openbtn").css("fill", "#000")
+      }
+   });
+});
+</script>
+
+</head> 
+
+<body>
+
+<nav id="nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/#home" class="smoothScroll">Home</a>
+    <a href="/#intro" class="smoothScroll">Intro</a>
+    <a href="/#portfolio" class="smoothScroll">Selected Work</a>
+    <li><a href="/#photos" class="smoothScroll">Photography</a>
+    <a href="/#codes" class="smoothScroll">Codes & Websites</a>
+    <a href="/#design" class="smoothScroll">Design & Video</a></li>
+    <a href="/#contact" class="smoothScroll">Contact</a>
+</nav>
+
+<span class="openbtn" title="Click to open menu" onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 396.667 396.667" style="enable-background:new 0 0 396.667 396.667;" xml:space="preserve"><g><g><path d="M17,87.833h362.667c9.35,0,17-7.65,17-17s-7.65-17-17-17H17c-9.35,0-17,7.65-17,17C0,80.183,7.65,87.833,17,87.833z"/><path d="M17,215.333h362.667c9.35,0,17-7.65,17-17s-7.65-17-17-17H17c-9.35,0-17,7.65-17,17S7.65,215.333,17,215.333z"/><path d="M17,342.833h362.667c9.35,0,17-7.65,17-17s-7.65-17-17-17H17c-9.35,0-17,7.65-17,17S7.65,342.833,17,342.833z"/></g></g></svg></span>
+
+<section id="home">
+    <div id="bio">
+        <img id="icon" src="https://static.tumblr.com/2e9nahe/4OXp376ks/logo.svg">
+        <div id="title"><a href="/">kevin.</a></div>
+        <p>I am a second-year student at The University of Virginia who has a passion for web design and development, graphic design, and photography.</p>
+    </div>
+</section>
+
+<section id="intro">
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Following in the footsteps of my father’s artistic hobbies, I couldn’t stop tinkering with pencil and paper as a child. This is how my love for art developed. Of course, children aren’t typically exposed to anything but traditional media, so as I grew into my middle school years, I picked up a drawing tablet and borrowed a digital camera to explore the beauty of digital media.</p>
+            </div> 
+            <div class="col-sm-6">
+                <p>It was during these years that I started to develop my passion for graphic and web design, and photography. I played around with typography and colors on Photoshop after being awestruck at the work of professionals on Behance, learned how to code to design and develop websites, and took a myriad of photos to document the minutiae of everyday life.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>This portfolio website is the culmination of the aforementioned passions. From the works selected for presentation to very the design choices of the website itself, I hope these elements are able to strike a chord with you. Thank you for visiting! Click <a href="https://static.tumblr.com/2e9nahe/0T3phzniq/new_resume.pdf">here</a> for my resume.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section id="portfolio">
+    <div class="container">
+        <h1>Selected Work</h1>
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="/#photos" class="smoothScroll"><img class="icons" src="https://static.tumblr.com/2e9nahe/kpVp58tba/camera.svg"></a>
+                <h2><a href="/#photos" class="smoothScroll">Photography</a></h2>
+            </div>
+            <div class="col-lg-4">
+                <a href="/#codes" class="smoothScroll"><img class="icons" src="https://static.tumblr.com/2e9nahe/C0wp58tjv/code.svg"></a>
+                <h2><a href="/#codes" class="smoothScroll">Codes & Websites</a></h2>
+            </div>
+            <div class="col-lg-4">
+                <a href="/#design" class="smoothScroll"><img class="icons" src="https://static.tumblr.com/2e9nahe/lmxp58tjy/gdesign.svg"></a>
+                <h2><a href="/#design" class="smoothScroll">Design & Video</a></h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="photos">
+    <h1>01</h1>
+    <h2>35mm Film</h2>
+    <h3>photography</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="http://static.tumblr.com/2e9nahe/j6Vowwi4u/05080018.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/13b4aa3e78d4b5ad7f13619a54f71376/tumblr_ow5976q7BN1wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/rFKRCSB.jpg" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/2bdf883e282f89b7c39fefd4c63566c4/tumblr_ow585jmW2l1wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/P5Wibcm.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/78c922c635060cb5128ee952513bb028/tumblr_ow58a40Dm31wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/d3b4f3b3e0effa77b2483aee5fb61802/tumblr_ow586mMG5Q1wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/f2f6b27ae9d07996f8f8e8e537a962e5/tumblr_ow57glpiKI1wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://78.media.tumblr.com/c0bc960437369c31dd85f147192d568a/tumblr_ow58civHwc1wb5szho1_1280.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <h1>02</h1>
+    <h2>Digital</h2>
+    <h3>photography</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/F6bnqPl.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/4izhoDd.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/vlAZK5G.jpg" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/nGtcU0l.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/X42p8LV.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/xDfGuAk.jpg" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/4S0yDEf.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/KbLBSLX.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="https://i.imgur.com/9du8Sgg.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="codes">
+    <h1>03</h1>
+    <h2>Websites</h2>
+    <h3>codes</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="http://math.progr.am" target="_blank"><img src="https://i.imgur.com/gEBIu4X.jpg" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="http://submit.soon.it" target="_blank"><img src="https://i.imgur.com/PZuLD2S.jpg" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="http://kh9de.tumblr.com" target="_blank"><img src="https://i.imgur.com/CxNts3x.jpg" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="/ouchizahan" target="_blank"><img src="https://i.imgur.com/S0LKsS0.jpg" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <h1>04</h1>
+    <h2>Themes</h2>
+    <h3>codes</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://amour-th.tumblr.com" target="_blank"><img src="https://78.media.tumblr.com/22a30f0ab3720c9b1059759da16a2836/tumblr_pdzd1bA9nE1rfxi02o1_1280.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://sentient-th.tumblr.com" target="_blank"><img src="https://68.media.tumblr.com/ac647b6243dddb4d523e6b272e5694ed/tumblr_ost3fivP9u1rfxi02o1_r1_1280.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://nocturne-th.tumblr.com" target="_blank"><img src="https://68.media.tumblr.com/8e6cb577883d52e8fdfde35697871c31/tumblr_otktqw3cHh1rfxi02o1_1280.png" class="img-fluid"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="http://flora-th.tumblr.com/preview2" target="_blank"><img src="https://static.tumblr.com/2e9nahe/8AAp59679/screen_shot_2018-03-07_at_10.39.46_pm.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://inhuman-th.tumblr.com" target="_blank"><img src="https://66.media.tumblr.com/871ec2b116e00d0f7a2f7a9d56da8623/tumblr_ogww312Rqs1rfxi02o1_r1_1280.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="http://pigment-th.tumblr.com" target="_blank"><img src="http://68.media.tumblr.com/8b02581e721e3f5a1177b6ed91227207/tumblr_oetd1v3fp61rfxi02o2_r1_500.png" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <br><h2><center>View more at <a href="http://shoseii.tumblr.com/thm" target="_blank">@shoseii</a></center></h2>
+</section>
+
+<section id="design">
+    <h1>05</h1>
+    <h2>Graphic</h2>
+    <h3>design</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="https://static.tumblr.com/2e9nahe/zWNp5lkzh/idk.pdf" target="_blank"><img src="https://static.tumblr.com/2e9nahe/RaTp5lkyp/idk.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://static.tumblr.com/2e9nahe/WgYp5996x/geography_infographic_2.pdf" target="_blank"><img src="https://static.tumblr.com/2e9nahe/pojp59b9w/geography-infographic-2.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://issuu.com/k.huynh1/docs/filament_2016-17_2" target="_blank"><img src="https://static.tumblr.com/2e9nahe/i6Rp599x8/filament_2016-17_2-1.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://static.tumblr.com/2e9nahe/kfrp5ll4g/ib2.png" target="_blank"><img src="https://static.tumblr.com/2e9nahe/kfrp5ll4g/ib2.png" class="img-fluid"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="https://static.tumblr.com/2e9nahe/JW3p598xw/geography_project.pdf" target="_blank"><img src="https://static.tumblr.com/2e9nahe/qsXp59ba0/geography-project-1.png" class="img-fluid"></a>
+            </div>
+            <div class="col-md-6">
+                <a href="https://i.imgur.com/I7PRJzF.png" target="_blank"><img src="https://i.imgur.com/I7PRJzF.png" class="img-fluid"></a>
+            </div>
+        </div>
+    </div>
+    <h1>06</h1>
+    <h2>Video</h2>
+    <h3>design</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/152332233" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/166339835" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Hv_VoYlfWvM" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section id="contact">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Contact</h1>
+                <p>Want to contact me? Simply fill out the form on the right or connect with me on the following social media sites.</p>
+                <li><a href="https://linkedin.com/in/kh9de"><img src="https://static.tumblr.com/2e9nahe/K3Tpbk7eh/iconmonstr-linkedin-3.svg"> kh9de</a></li>
+                <li><a href="https://medium.com/@k.huynh1"><img src="https://static.tumblr.com/2e9nahe/jUFpbk7wz/iconmonstr-medium-5.svg"> k.huynh1</a></li>
+            </div>
+            <div class="col-md-8">
+                <form id="serverless-contact-form">
+                    <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
+                    <input id="form-subject" class="form-control" type="text" name="subject" placeholder="Subject">
+                    <textarea id="form-message" name="message" placeholder="Message"></textarea>
+                    <input id="form-submit" class="submit" type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p id="confirmation"></p>
+ 
+<script type="text/javascript">
+    document.getElementById('serverless-contact-form').addEventListener('submit', sendDataToLambda);
+    function sendDataToLambda(e) {
+      e.preventDefault();
+      
+      var formEmail = document.querySelector('#form-email').value;
+      var formSubject = document.querySelector('#form-subject').value;
+      var formMessage = document.querySelector('#form-message').value;
+      
+      var endpoint = 'https://i86nt2eial.execute-api.us-east-1.amazonaws.com/prod/ContactFormLambda';
+      
+      var body = {
+        email: formEmail,
+        subject: formSubject,
+        message: formMessage
+      }
+      
+      var lambdaRequest = new Request(endpoint, {
+        method: 'POST',
+        body: JSON.stringify(body)
+      });
+      
+      // Grab the element we created above (below the form) ^^^
+      var confirmation = document.getElementById('confirmation');
+      
+      // Make the request...
+      fetch(lambdaRequest)
+        .then(response => {
+          // If the request succeeds, put confirmation text into our element:
+          if(response.ok) {
+             confirmation.innerHTML = "<span style='color:green'>Thanks for your message! We'll be in touch soon.</span>";
+          } else{
+            confirmation.innerHTML = "<span style='color:red'>Oops! Something went wrong. Please try again.</span>";
+          }
+        })
+        .catch(console.error)
+    }
+ </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
