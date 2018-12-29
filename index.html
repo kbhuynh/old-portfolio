@@ -64,6 +64,45 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+    document.getElementById('serverless-contact-form').addEventListener('submit', sendDataToLambda);
+    function sendDataToLambda(e) {
+      e.preventDefault();
+      
+      var formEmail = document.querySelector('#form-email').value;
+      var formSubject = document.querySelector('#form-subject').value;
+      var formMessage = document.querySelector('#form-message').value;
+      
+      var endpoint = 'https://i86nt2eial.execute-api.us-east-1.amazonaws.com/prod/ContactFormLambda';
+      
+      var body = {
+        email: formEmail,
+        subject: formSubject,
+        message: formMessage
+      }
+      
+      var lambdaRequest = new Request(endpoint, {
+        method: 'POST',
+        body: JSON.stringify(body)
+      });
+      
+      // Grab the element we created above (below the form) ^^^
+      var confirmation = document.getElementById('confirmation');
+      
+      // Make the request...
+      fetch(lambdaRequest)
+        .then(response => {
+          // If the request succeeds, put confirmation text into our element:
+          if(response.ok) {
+             confirmation.innerHTML = "<span style='color:green'>Thanks for your message! We'll be in touch soon.</span>";
+          } else{
+            confirmation.innerHTML = "<span style='color:red'>Oops! Something went wrong. Please try again.</span>";
+          }
+        })
+        .catch(console.error)
+    }
+ </script>    
+    
 </head> 
 
 <body>
@@ -331,45 +370,6 @@ $(document).ready(function(){
 </section>
 
 <p id="confirmation"></p>
- 
-<script type="text/javascript">
-    document.getElementById('serverless-contact-form').addEventListener('submit', sendDataToLambda);
-    function sendDataToLambda(e) {
-      e.preventDefault();
-      
-      var formEmail = document.querySelector('#form-email').value;
-      var formSubject = document.querySelector('#form-subject').value;
-      var formMessage = document.querySelector('#form-message').value;
-      
-      var endpoint = 'https://i86nt2eial.execute-api.us-east-1.amazonaws.com/prod/ContactFormLambda';
-      
-      var body = {
-        email: formEmail,
-        subject: formSubject,
-        message: formMessage
-      }
-      
-      var lambdaRequest = new Request(endpoint, {
-        method: 'POST',
-        body: JSON.stringify(body)
-      });
-      
-      // Grab the element we created above (below the form) ^^^
-      var confirmation = document.getElementById('confirmation');
-      
-      // Make the request...
-      fetch(lambdaRequest)
-        .then(response => {
-          // If the request succeeds, put confirmation text into our element:
-          if(response.ok) {
-             confirmation.innerHTML = "<span style='color:green'>Thanks for your message! We'll be in touch soon.</span>";
-          } else{
-            confirmation.innerHTML = "<span style='color:red'>Oops! Something went wrong. Please try again.</span>";
-          }
-        })
-        .catch(console.error)
-    }
- </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
