@@ -63,24 +63,6 @@ $(document).ready(function(){
    });
 });
 </script>
-
-<script type="text/javascript">
-      // Grab the element we created above (below the form) ^^^
-      var confirmation = document.getElementById('confirmation');
-      
-      // Make the request...
-      fetch(lambdaRequest)
-        .then(response => {
-          // If the request succeeds, put confirmation text into our element:
-          if(response.ok) {
-             confirmation.innerHTML = "<span style='color:green'>Thanks for your message! We'll be in touch soon.</span>";
-          } else{
-            confirmation.innerHTML = "<span style='color:red'>Oops! Something went wrong. Please try again.</span>";
-          }
-        })
-        .catch(console.error)
-    }
- </script>    
     
 </head> 
 
@@ -337,7 +319,7 @@ $(document).ready(function(){
                 <li><a href="https://medium.com/@k.huynh1"><img src="https://static.tumblr.com/2e9nahe/jUFpbk7wz/iconmonstr-medium-5.svg"> k.huynh1</a></li>
             </div>
             <div class="col-md-8">
-                <form id="serverless-contact-form" action="https://hooks.zapier.com/hooks/catch/3348268/0hjmbv/" type="POST">
+                <form id="contact-form">
                     <input id="form-email" class="form-control" type="text" name="email" placeholder="Email">
                     <input id="form-subject" class="form-control" type="text" name="subject" placeholder="Subject">
                     <textarea id="form-message" name="message" placeholder="Message"></textarea>
@@ -349,6 +331,19 @@ $(document).ready(function(){
 </section>
 
 <p id="confirmation"></p>
+
+$('#contact-form').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'https://hooks.zapier.com/hooks/catch/3348268/0hjmbv/',
+        type:'post',
+        data:$('#contact-form').serialize(),
+        success:function(){
+          // Redirect to another success page
+          window.alert("Thanks for the email! We'll be in contact soon.");
+        }
+    });
+});
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
